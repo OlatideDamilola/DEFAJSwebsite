@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Defajs First</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="theme-color" content="#0077a3" />
+    <link href="~/Content/assets/css/appstyle.css" rel="stylesheet" />
+    <link href="~/Content/assets/css/swiper.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/assets/css/animate.min.css" rel="stylesheet" type="text/css" />
+   <style>
+       @@media screen and (max-width:555px) {
+           .app-bar-menu {
+               background-color: #6d8764 !important;
+           }
+       }
+   </style>
+    <script>
+        var maskAp = false;
+    </script>
+</head>
+
+<body class="m4-cloak">
+    <header>
+        <div id='mm' data-role='appbar' data-expand-point='lg' class='bg-transparent'>
+            <a href='/' class='brands no-hover mt-2 ml-20-md text-centerd'>
+                <img src='~/Content/assets/images/df.png' @*class='w-75-fs w-50-md'*@ style="height:60px;width:60px;" alt='logo' />
+            </a>
+            <ul class='app-bar-menu mx-auto text-bold fg-white'>
+                <li><a href='/' class=' ani-hover-horizontal'>HOME</a></li>
+                <li>
+                    <a href='#' class='dropdown-toggle ani-hover-horizontal'>ABOUT US</a>
+                    <ul class='d-menu' data-role='dropdown'>
+                        <li><a href='#about-us'>Who we are</a></li>
+                        <li>
+                            <a href='#' class='dropdown-toggle'>Our Services</a>
+                            <ul class='d-menu' data-role='dropdown'>
+                                <li><a href='/about-us/officials/1'>Engineering</a></li>
+                                <li><a href='/about-us/officials/2'>Real Estate</a></li>
+                            </ul>
+                        </li>
+                        <li><a href=''>Our Vision & Mandate</a></li>
+                        <li><a href='Our-history'>Our History</a></li>
+                        <li class='divider bg-lightGray'></li>
+                    </ul>
+                </li>
+                <li><a href='/' class=' ani-hover-horizontal'>GALLERY</a></li>
+                <li><a href='/' class=' ani-hover-horizontal'>MESSAGE US</a></li>
+                <li><a href='#contact' class=' ani-hover-horizontal'>CONTACT US</a></li>
+                <li><a href='#' class='no-visible-lg fg-white'><span class=' mif-key'></span></a></li>
+            </ul>
+            <div class=' app-bar-item d-none-fs d-block-lg put-right'>
+                <a href='#' class=' fg-white'>
+                    <span class=' mif-search mif-2x'></span>
+                </a>
+            </div>
+            <div class=' app-bar-item d-none-fs d-block-lg put-right'>
+                <a href='#' class=' fg-white'>
+                    <span class=' mif-key'></span>
+                </a>
+            </div>
+        </div>
+    </header>
+    
+        @RenderBody()
+   
+  
+
+<footer class='pt-7 bg-olive'>
+    <div class="info-box" data-role="info-box" id="info-box" data-overlay-click-close="true">
+        <span class="button square closer"></span>
+        <div class="info-box-content p-1">
+            <form target='' method='post' class='p-1 bg-grayWhite border clear'>
+                <p class='text-medium text-bold mb-3 fg-olive'>MESSAGE US</p>
+                <input type='text' data-role='input' data-prepend="<span class='mif-user fg-olive'></span>" placeholder='Your names' required>
+                <input type='number' class='my-5' data-role='input' data-prepend="<span class='mif-phone-in-talk fg-olive'></span>" placeholder='Phone number' required>
+                <input type='email' data-role='input' data-prepend="<span class='mif-mail fg-olive'></span>" placeholder='E-mail Address'>
+                <textarea data-role='textarea' class='my-5' placeholder='Your message' required data-prepend="<span class='mif-chat mif-2x fg-olive'></span>"></textarea>
+                <button class='button border-radius-4 bg-darkOlive place-right fg-white text-bold'>SEND</button>
+            </form>
+        </div>
+    </div>
+    <div id="sideBtn" class="d-flex flex-column bg-red pos-fixed pos-right-center pr-3 pl-4 py-2" style="z-index:2; border-radius: 50% 0px 0px 50%;">
+        <a href="#" class="mb-1"><span class="mif-chevron-thin-up mif-2x text-bold fg-white"></span></a>
+        <a class="mt-1" onclick="Metro.getPlugin('#info-box', 'info-box').open()"><span class="mif-envelop fg-white mif-2x ani-shake"></span></a>
+    </div>
+    <section>
+        <div class='container w-75-md mx-auto'>
+            <div class="row">
+                <div class="cell-md-6">
+                    <div class='d-flex flex-row'>
+                        <span class='mif-location mif-3x fg-white'></span>
+                        <div class='d fg-white'>
+                            <span class='text-medium'>ADDRESS</span> <br />
+                            <span class='mw-50-md'>No 2, LAUTECH road, Under G, Ogbomoso, Oyo state, Nigeria.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell-md-2">
+                    <div class='d-flex flex-row'>
+                        <span class='mif-phone-in-talk mif-3x fg-white'></span>
+                        <div class='d-flex flex-column fg-white'>
+                            <span class='text-medium '>OFFICE PHONE</span>
+                            <span>+234-807-369-487</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell-md-2">
+                    <div class='d-flex flex-row'>
+                        <span class='mif-mail mif-3x fg-white'></span>
+                        <div class='d-flex flex-column fg-white'>
+                            <span class='text-medium'>EMAIL</span>
+                            <span>company@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+             </div>
+
+                <ul class="h-menu bg-olive mt-5">
+                    <li><a href="#" class="text-bold fg-white">Home</a></li>
+                    <li><a href="#" class="text-bold fg-white">About us</a></li>
+                    <li><a href="#" class="text-bold fg-white">Gallery</a></li>
+                    <li><a href="#" class="text-bold fg-white">Message us</a></li>
+                    <li><a href="#" class="text-bold fg-white">Contact us</a></li>
+                </ul>
+                <hr class="bg-crimson w-100 border-size-1" />
+                <div class="d-flex flex-row flex-justify-between mb-2">
+                    <span class=' fg-white'>DEFAJS  &copy2022</span>
+                    <div class="flex-row">
+                        <span class="mif-facebook px-3 border-radius-half fg-white bg-amazon p-2"></span>
+                        <span class="mif-twitter border-radius-half fg-white bg-amazon p-2"></span>
+                        <span class="mif-instagram border-radius-half fg-white bg-amazon p-2"></span>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+                @*<div class='row'>
+            <div class='cell-md-6 order-2 order-md-1 d-flex flex-column mt-20-md'>
+                <small>Get In Touch</small>
+                <div class='text-leader text-bold fg-teal'>Contact Us</div>
+                <div class='d-flex flex-row mt-4'>
+                    <span class='mif-location mif-3x fg-teal'></span>
+                    <div class='d-flex flex-column'>
+                        <span class='text-medium'>ADDRESS</span>
+                        <span class='mw-50-md'>No 2, LAUTECH road, Under G, Ogbomoso, Oyo state, Nigeria.</span>
+                    </div>
+                </div>
+                <div class='d-flex flex-row my-4'>
+                    <span class='mif-phone-in-talk mif-3x fg-teal'></span>
+                    <div class='d-flex flex-column'>
+                        <span class='text-medium '>OFFICE PHONE</span>
+                        <span>+234-807-369-487</span>
+                    </div>
+                </div>
+                <div class='d-flex flex-row mt-2'>
+                    <span class='mif-mail mif-3x fg-teal'></span>
+                    <div class='d-flex flex-column'>
+                        <span class='text-medium'>EMAIL</span>
+                        <span>company@gmail.com</span>
+                    </div>
+                </div>
+                <div class='d-flex flex-row mt-2 pl-5'>
+                    <a href='#' class='noDeco'><span class='mif-facebookd mif-facebook2 mif-2x fg-blue'></span></a>
+                    <a href='#' class='noDeco mx-8'><span class='mif-instagram mif-2x fg-red'></span></a>
+                    <a href='#' class='noDeco'><span class='mif-twitter mif-2x fg-blue'></span></a>
+                </div>
+            </div>
+            <div class='cell-md-6 order-1 order-md-2'>
+                <form target='' method='post' class='p-5 bg-grayWhite border clear'>
+                    <p class='text-medium text-bold mb-3'>MESSAGE US</p>
+                    <input type='text' data-role='input' data-prepend='<span class=mif-user></span>' placeholder='Your names' required>
+                    <input type='number' class='my-5' data-role='input' data-prepend='<span class=mif-phone-in-talk></span>' placeholder='Phone number' required>
+                    <input type='email' data-role='input' data-prepend='<span class=mif-mail></span>' placeholder='E-mail Address'>
+                    <textarea data-role='textarea' class='my-5' placeholder='Your message' required data-prepend='<span class=mif-chat mif-2x></span>'></textarea>
+                    <button class='button border-radius-4 bg-teal place-right fg-white text-bold'>SEND</button>
+                </form>
+            </div>
+
+        </div>*@
+            </div>
+    </section>
+    <div class='bg-darkEmerald text-center fg-white darkOlive'>&copy2022 Best Technology</div>
+</footer>
+    <script>
+        $(function () {
+            $('#subheda').attr('style', 'margin-top:' + $('#mm').style('height'));
+            $(window).resize(function (e) {
+                $('#subheda').attr('style', 'margin-top:' + $('#mm').style('height'));
+            });
+            $('.hamburger').removeClass(' dark').addClass(' white');
+            if (maskAp) {
+                $(window).scroll(function (e) {
+                    (scrollY > 80) ? $('#mm').removeClass('bg-transparent').addClass('bg-darkOlive') : $('#mm').removeClass('bg-darkOlive').addClass('bg-transparent');
+                });
+            }
+        })
+
+
+
+    </script>
+</body>
+</html>
